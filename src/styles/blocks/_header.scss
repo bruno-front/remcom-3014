@@ -1,0 +1,28 @@
+.header {
+  padding: 25px 0;
+  color: $color-light;
+  background-color: $color-dark;
+}
+
+.header-inner {
+  width: 1278px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  color: $color-light;
+  margin-right: auto;
+  text-decoration: none;
+}
+
+.header-phone {
+  margin-left: 100px;
+  color: $color-light;
+  text-decoration: none;
+}
