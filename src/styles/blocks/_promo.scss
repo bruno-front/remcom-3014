@@ -2,3 +2,37 @@
   padding: 137px 0 136px;
   background-color: rgba($color-light, .2);
 }
+
+.promo-inner {
+  @include inner;
+}
+
+.promo-row {
+  display: flex;
+}
+
+.promo-desc {
+  flex-basis: 50%;
+  padding-right: $gap-half;
+}
+
+.promo-title {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: $color-accent;
+
+  span {
+    display: block;
+    margin-bottom: 20px;
+    font-family: $font-title;
+    font-weight: 300;
+    font-size: 116px;
+    line-height: 136px;
+  }
+}
+
+.promo-visual {
+  flex-basis: 50%;
+  padding-left: $gap-half;
+}
