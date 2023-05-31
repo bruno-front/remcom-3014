@@ -1,0 +1,19 @@
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-family: $font;
+  font-weight: 400;
+  color: $color-light;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  background-color: $color-accent;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-form {
+  width: 100%;
+}
