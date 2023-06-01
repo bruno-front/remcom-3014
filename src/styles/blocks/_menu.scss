@@ -1,4 +1,8 @@
 .menu {
+  @media (max-width: 1279px) {
+    display: none;
+  }
+
   ul {
     display: flex;
     list-style: none;
