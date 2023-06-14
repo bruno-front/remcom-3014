@@ -1,129 +1,83 @@
-console.log('script work!');
-
-console.log('Hello world!');
-
-
-let petName;
-
-petName = 'Kesha';
-
-console.log( petName );
-
-petName = 34;
-
-console.log( petName );
-
-petName = null;
-
-console.log( petName );
-
-const Pi = 3.14;
-
-console.log(Pi);
-
-let petNames = ['Kesha', 'Gans', 'Fiona', 'Ryan', 'Robin'];
-
-console.log( petNames );
-console.log( petNames.length );
-
-
-
-console.log( petNames[0] + 'Meewww');
-
-console.log( 9 - '5');
-
-let isTest = 5 === 5;
-
-console.log(isTest);
-
-
-let myFriend = '';
-
-console.log(myFriend.length);
-
-if (myFriend) {
-  console.log( 'Заходи дорогой ' + myFriend );
-} else {
-  console.log( 'Стой - кто идет!' );
+function sum(a, b) {
+  console.log('BEFORE');
+  return a + b;
 }
 
+let c = {
+  name: 'Kesha'
+}
+let x = 6;
 
-// if () {}
-// for () {}
-// function fn () {}
+let sum1 = sum(c, x);
+let sum2 = sum(1, 3);
 
-for (let i = 0; i < petNames.length; i++ ) {
-  console.log( petNames[i] );
+console.log(sum1);
+console.log(sum2);
+
+// let services = document.querySelectorAll('.services-item');
+
+// services.style.color = 'red';
+// services.style.border = '2px solid green';
+
+
+// for (let i = 0; i < services.length; i++) {
+//   services[i].classList.add('services-item-test');
+// }
+
+// services.forEach( function(item) {
+//   item.classList.add('services-item-test');
+// } );
+
+
+function runCustomFunction(a) {
+  a();
 }
 
-let num1 = 4;
-let num2 = 5;
-
-function summ (a, b) {
-  console.log(a + b);
+let iNeedSleep = function() {
+  console.log('Я обещаю два дня из 7 накануне занятий, в понедельник и среду, ложиться спать рано, что бы выспаться');
 }
 
-summ(num1, num2);
+function iWantShoot() {
+  console.log('Пиф-паф');
+}
+
+runCustomFunction(iNeedSleep);
+runCustomFunction(iWantShoot);
+
+runCustomFunction( function() {
+  console.log('Я сообщение из безымянной функции, которая никуда не записана');
+} );
 
 
+let burger = document.querySelector('.js-burger');
+let menu = document.querySelector('.js-menu');
 
-summ(3, 6);
-summ(2, 6);
-summ(3, 8);
-summ(1, 1);
+burger.addEventListener('click', function() {
+  let isOpen = menu.classList.contains('menu-open');
 
-
-function sayHi(name) {
-  if (name) {
-    console.log('Привет, ' + name);
+  if ( isOpen ) {
+    menu.classList.remove('menu-open');
   } else {
-    console.log('Привет товарищ!');
+    menu.classList.add('menu-open');
   }
-}
-
-sayHi();
-sayHi('Света');
-
-for (let i = 0; i < petNames.length; i++) {
-  sayHi( petNames[i] );
-}
+});
 
 
+// let menuLinks = document.querySelectorAll('.menu a');
 
-let hiSay = function (name) {
-  if (name) {
-    console.log('Привет, ' + name);
-  } else {
-    console.log('Привет товарищ!');
-  }
-}
+// menuLinks.forEach(function(link) {
+//   link.addEventListener('click', function(event) {
+//     event.preventDefault();
+//   });
+// });
 
-hiSay('Gleb');
 
-let cat = {
-  name: 'Kesha',
-  age: 13,
-  isBall: false,
-  color: 'line gray',
-  mew: function(meww) {
-    console.log(meww);
-  },
-  parents: [
-    {
-      name: 'Chucha',
-      age: 33,
-      mew: function() {
 
-      }
-    },
-    {}
-  ]
-}
+$(document).ready(function() {
 
-catName = 'Kesha';
 
-cat.mew('mmmmeeeewwwww');
-cat.mew('ДАЙ ПОЖРАТЬ');
+  console.log('jQuery working!');
 
-console.log(cat.name);
-console.log(cat.color);
+
+});
+

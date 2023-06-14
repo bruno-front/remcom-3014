@@ -56,3 +56,8 @@
   // }
 }
 
+.menu-open {
+  @media (max-width: $tablet-max) {
+    display: block;
+  }
+}

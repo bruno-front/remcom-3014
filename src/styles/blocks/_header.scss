@@ -64,6 +64,13 @@
 }
 
 .burger {
+  display: none;
   width: 45px;
   height: 45px;
+
+  @media (max-width: $tablet-max) {
+    display: block;
+  }
+
+
 }
