@@ -40,13 +40,16 @@
     }
   }
 
+
+
   a {
     font-size: 24px;
     line-height: 33px;
     color: $color-light;
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &.active {
       color: $color-accent;
     }
   }
