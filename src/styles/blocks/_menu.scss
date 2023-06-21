@@ -1,4 +1,8 @@
 .menu {
+  @media (min-width: $desktop) {
+    display: block !important;
+  }
+
   @media (max-width: $tablet-max) {
     position: absolute;
     top: 100%;
@@ -8,10 +12,6 @@
     padding: 20px;
     border-top: 1px solid $color-light;
     background-color: $color-dark;
-  }
-
-  @media (max-width: $mobile-max) {
-
   }
 
   ul {
