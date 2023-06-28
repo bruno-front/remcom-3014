@@ -1,0 +1,20 @@
+.gallery {
+  padding: 100px 0;
+  background-color: $color-light;
+
+  @media (max-width: $tablet-max) {
+    padding: 70px 0 88px;
+  }
+
+  @media (max-width: $mobile-max) {
+    padding: 50px 0;
+  }
+}
+
+.gallery-inner {
+  @include inner;
+}
+
+.gallery-title {
+  @include section-title;
+}

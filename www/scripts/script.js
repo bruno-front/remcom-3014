@@ -61,7 +61,13 @@ $(document).ready(function() {
         $(this).hide();
       }
     });
+  });
 
+
+  // Каруселька Slick
+  $('.js-carousel').slick({
+    autoplay: true,
+    dots: true
   });
 
 });
