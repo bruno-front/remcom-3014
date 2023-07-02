@@ -6,6 +6,8 @@
 }
 
 .accordion-question {
+  display: flex;
+  align-items: center;
   width: 100%;
   padding: 30px;
   font-family: $font-title;
@@ -15,6 +17,24 @@
   border: none;
   background-color: rgba(0, 0, 0, 0);
   text-align: left;
+
+  &.open {
+    .accordion-icon {
+      background-image: url('../images/icon-minus.svg');
+    }
+  }
+}
+
+.accordion-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  background-image: url('../images/icon-plus.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .accordion-answer {

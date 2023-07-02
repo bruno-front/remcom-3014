@@ -18,10 +18,13 @@ $(document).ready(function() {
   let prevBtn;
   $('.js-accordion-btn').on('click', function() {
     if (prevBtn === this) {
+      $(this).toggleClass('open');
       $(this).next().slideToggle();
     } else {
       $(prevBtn).next().slideUp();
+      $(prevBtn).removeClass('open');
       $(this).next().slideDown();
+      $(this).addClass('open');
       prevBtn = this;
     }
   });
@@ -69,6 +72,43 @@ $(document).ready(function() {
     autoplay: true,
     dots: true
   });
+
+  // AJAX запрос за отзывами
+  $('.js-review-btn').on('click', function() {
+    $.ajax({
+      type: 'POST',
+      url: '../jsons/reviews.json',
+      data: {
+        quantity: 2
+      },
+      success: function(res) {
+        let reviewsHtml = createReviewsHtml(res.reviews);
+
+        $('.js-reviews-wrap').append(reviewsHtml);
+      },
+      error: function() {
+        console.log('уфффъ не работает браты');
+      }
+    });
+  });
+
+  function createReviewsHtml(dataArray) {
+    let htmlString = '';
+
+    dataArray.forEach(function(item) {
+      htmlString = htmlString + `<div class="reviews-item">
+        <img src="${item.imgUrl}" alt="${item.imgAlt}" class="reviews-ava">
+        <div class="reviews-text">
+          <strong class="reviews-name">${item.name}</strong>
+          <blockquote class="reviews-quote">
+            “${item.text}”
+          </blockquote>
+        </div>
+      </div>`;
+    });
+
+    return htmlString;
+  }
 
 });
 
